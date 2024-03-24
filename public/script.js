@@ -1,6 +1,11 @@
+// Dark Mode
+
+
 document.addEventListener('DOMContentLoaded', function() {
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeImage = document.getElementById('theme-image');
+    const themeToggle = document.getElementById('themeToggle');
+    const themeImage = document.getElementById('themeImage');
+    const menuOpenImage = document.getElementById('menuOpenImage'); // Hamburger menu open image 
+    const menuCloseImage = document.getElementById('menuCloseImage'); // Hamburger menu close image
 
     // Check the current theme
     const currentTheme = localStorage.theme;
@@ -25,12 +30,36 @@ document.addEventListener('DOMContentLoaded', function() {
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
             themeImage.src = "./img/dark-mode.png"; // Set dark mode image
+            menuOpenImage.src = "./img/hamburger-menu-open-black.png"; // Set black hamburger menu open image
+            menuCloseImage.src = "./img/hamburger-menu-close-black.png"; // Set black hamburger menu close image
         } else {
             document.documentElement.classList.remove('dark');
             themeImage.src = "./img/light-mode.png"; // Set light mode image
+            menuOpenImage.src = "./img/hamburger-menu-open-white.png"; // Set white hamburger menu open image
+            menuCloseImage.src = "./img/hamburger-menu-close-white.png"; // Set white hamburger menu close image
         }
     }
 });
+
+// Hamburger Menu 
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const dropDownMenu = document.getElementById('dropDownMenu');
+    const menuOpenImage = document.getElementById('menuOpenImage');
+    const menuCloseImage = document.getElementById('menuCloseImage');
+
+    menuToggle.addEventListener('click', function() {
+      dropDownMenu.classList.toggle('hidden');
+      menuOpenImage.classList.toggle('hidden');
+      menuCloseImage.classList.toggle('hidden');
+    });
+});
+
+
+// Typing Effect 
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const texts = [
@@ -62,4 +91,4 @@ document.addEventListener('DOMContentLoaded', function() {
   
     // Start typing effect with the first text
     typeNextText();
-  });
+});

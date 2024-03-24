@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,10 +25,46 @@
     }
   </style>
 </head>
-
 <body class="bg-white dark:bg-black">
-  <div class="flex items-center -space-x-32">
+  <div class="flex justify-center items-center -space-x-32">
+
+    <!-- Navigation Bar -->
     <nav class="bg-black dark:bg-white w-3/4 h-14 sm:w-3/4 sm:h-16 mx-auto my-10 rounded-full">
+
+      <!-- Hamburger Menu -->
+      <div class="flex justify-center">
+        <button id="menuToggle" class="flex sm:hidden m-3 rounded-full ">
+          <img id="menuOpenImage" src="" alt="hamburger-menu-open">
+          <img id="menuCloseImage" src="" alt="hamburger-menu-close" class="hidden">
+        </button>
+        <div id="dropDownMenu" class="hidden bg-black dark:bg-white absolute  mt-12 py-4 w-48 rounded-3xl text-center">
+          <a href="#" class="text-white dark:text-black text-sm mx-auto hover:bg-orange-400 px-14 py-1.5 rounded-full
+          active:bg-orange-600">
+          Home
+          </a>
+          <a href="#" class="text-white dark:text-black text-sm mx-auto hover:bg-orange-400 px-14 py-1.5 rounded-full
+         active:bg-orange-600">
+          About
+        </a>
+        <a href="#" class="text-white dark:text-black text-sm mx-auto hover:bg-orange-400 px-14 py-1.5 rounded-full
+         active:bg-orange-600">
+          Service
+        </a>
+        <a href="#" class="text-white dark:text-black text-sm mx-auto hover:bg-orange-400 px-14 py-1.5 rounded-full
+         active:bg-orange-600">
+          Resume
+        </a>
+        <a href="#" class="text-white dark:text-black text-sm mx-auto hover:bg-orange-400 px-14 py-1.5 rounded-full
+         active:bg-orange-600">
+          Project
+        </a>
+        <a href="#" class="text-white dark:text-black text-sm mx-auto hover:bg-orange-400 px-14 py-1.5 rounded-full
+         active:bg-orange-600">
+          Contact
+        </a>
+      </div>
+
+      <!-- Menu Items -->
       <div class="hidden sm:flex">
         <a href="#" class="text-white dark:text-black text-sm mx-auto my-2 hover:bg-orange-400 px-14 py-3.5 rounded-full cursor-pointer
          active:bg-orange-600">
@@ -58,24 +93,31 @@
       </div>
     </nav>
     <div class="hidden sm:flex pr-32">
-      <button id="theme-toggle" class="w-16 h-14 border-solid border-2 border-black dark:border-white rounded-full">
-        <img id="theme-image" class="mx-auto rounded-full" src="" alt="theme toggler">
+      <button id="themeToggle" class="w-16 h-14 border-solid border-2 border-black dark:border-white rounded-full">
+        <img id="themeImage" class="mx-auto rounded-full" src="" alt="theme toggler">
       </button>
     </div>
   </div>
-  <div class="w-24 h-12 border-solid border-2 border-black dark:border-white rounded-full flex items-center mx-auto">
-    <h2 class="text-black dark:text-white text-lg mx-6">
-      Hello!
-    </h2>
-  </div>
-  <h1 class="text-2xl sm:text-4xl font-semibold text-center mt-8 text-black dark:text-white">
-    I'm 
-    <span class="text-orange-500">
-      Shivansh,
-    </span>
-    <div class="mt-4">
-      <h1 id="text-changer" class="text-4xl sm:text-6xl font-bold inline-block truncate border-r-2 border-solid border-orange-500 whitespace-nowrap"></h1>
+  <div>
+    <div class="w-24 h-12 border-solid border-2 border-black dark:border-white rounded-full flex items-center mx-auto">
+      <h2 class="text-black dark:text-white text-lg mx-6">
+        Hello!
+      </h2>
     </div>
+    <h1 class="text-2xl sm:text-4xl font-semibold text-center mt-8 text-black dark:text-white">
+      I'm 
+      <span class="text-orange-500">
+        Shivansh,
+      </span>
+      <div class="mt-4">
+        <h1 id="text-changer" class="text-4xl sm:text-6xl font-bold inline-block truncate border-r-2 border-solid border-orange-500 whitespace-nowrap"></h1>
+      </div>
+      <div class="h-20 w-32">
+        <div class="bg-cover bg-center" style="background-image: url(./img/my-image.jpg);">
+          <!-- <img src="./img/my-image.jpg" alt="my-image" class="h-20 w-32"> -->
+        </div>
+      </div>
+  </div>
   </h1>
 </body>
 </html>
