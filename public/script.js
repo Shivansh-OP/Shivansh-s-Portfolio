@@ -1,6 +1,5 @@
 // Dark Mode
 
-
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     const themeImage = document.getElementById('themeImage');
@@ -29,20 +28,20 @@ document.addEventListener('DOMContentLoaded', function() {
     function applyTheme() {
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
-            themeImage.src = "./img/dark-mode.png"; // Set dark mode image
-            menuOpenImage.src = "./img/hamburger-menu-open-black.png"; // Set black hamburger menu open image
-            menuCloseImage.src = "./img/hamburger-menu-close-black.png"; // Set black hamburger menu close image
+            themeImage.src = "./img/darkMode.png"; // Set dark mode image
+            menuOpenImage.src = "./img/hamburgerMenuOpenBlack.png"; // Set black hamburger menu open image
+            menuCloseImage.src = "./img/hamburgerMenuCloseBlack.png"; // Set black hamburger menu close image
         } else {
             document.documentElement.classList.remove('dark');
-            themeImage.src = "./img/light-mode.png"; // Set light mode image
-            menuOpenImage.src = "./img/hamburger-menu-open-white.png"; // Set white hamburger menu open image
-            menuCloseImage.src = "./img/hamburger-menu-close-white.png"; // Set white hamburger menu close image
+            themeImage.src = "./img/lightMode.png"; // Set light mode image
+            menuOpenImage.src = "./img/hamburgerMenuOpenWhite.png"; // Set white hamburger menu open image
+            menuCloseImage.src = "./img/hamburgerMenuCloseWhite.png"; // Set white hamburger menu close image
         }
     }
 });
 
-// Hamburger Menu 
 
+// Hamburger Menu 
 
 document.addEventListener('DOMContentLoaded', function() {
     const menuToggle = document.getElementById('menuToggle');
@@ -59,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Typing Effect 
-
 
 document.addEventListener('DOMContentLoaded', function() {
     const texts = [

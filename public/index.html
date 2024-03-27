@@ -66,58 +66,77 @@
 
       <!-- Menu Items -->
       <div class="hidden sm:flex">
-        <a href="#" class="text-white dark:text-black text-sm mx-auto my-2 hover:bg-orange-400 px-14 py-3.5 rounded-full cursor-pointer
+        <a href="#" class="text-white dark:text-black text-sm mx-auto my-2 hover:bg-orange-400 px-14 py-3.5 rounded-full 
          active:bg-orange-600">
           Home
         </a>
-        <a href="#" class="text-white dark:text-black text-sm mx-auto my-2 hover:bg-orange-400 px-14 py-3.5 rounded-full cursor-pointer
+        <a href="#" class="text-white dark:text-black text-sm mx-auto my-2 hover:bg-orange-400 px-14 py-3.5 rounded-full 
          active:bg-orange-600">
           About
         </a>
-        <a href="#" class="text-white dark:text-black text-sm mx-auto my-2 hover:bg-orange-400 px-14 py-3.5 rounded-full cursor-pointer
+        <a href="#" class="text-white dark:text-black text-sm mx-auto my-2 hover:bg-orange-400 px-14 py-3.5 rounded-full 
          active:bg-orange-600">
           Service
         </a>
-        <a href="#" class="text-white dark:text-black text-sm mx-auto my-2 hover:bg-orange-400 px-14 py-3.5 rounded-full cursor-pointer
+        <a href="#" class="text-white dark:text-black text-sm mx-auto my-2 hover:bg-orange-400 px-14 py-3.5 rounded-full 
          active:bg-orange-600">
           Resume
         </a>
-        <a href="#" class="text-white dark:text-black text-sm mx-auto my-2 hover:bg-orange-400 px-14 py-3.5 rounded-full cursor-pointer
+        <a href="#" class="text-white dark:text-black text-sm mx-auto my-2 hover:bg-orange-400 px-14 py-3.5 rounded-full 
          active:bg-orange-600">
           Project
         </a>
-        <a href="#" class="text-white dark:text-black text-sm mx-auto my-2 hover:bg-orange-400 px-14 py-3.5 rounded-full cursor-pointer
+        <a href="#" class="text-white dark:text-black text-sm mx-auto my-2 hover:bg-orange-400 px-14 py-3.5 rounded-full 
          active:bg-orange-600">
           Contact
         </a>
       </div>
     </nav>
+
+    <!-- Dark Mode Button -->
     <div class="hidden sm:flex pr-32">
       <button id="themeToggle" class="w-16 h-14 border-solid border-2 border-black dark:border-white rounded-full">
         <img id="themeImage" class="mx-auto rounded-full" src="" alt="theme toggler">
       </button>
     </div>
   </div>
-  <div>
-    <div class="w-24 h-12 border-solid border-2 border-black dark:border-white rounded-full flex items-center mx-auto">
-      <h2 class="text-black dark:text-white text-lg mx-6">
-        Hello!
-      </h2>
-    </div>
+  <div class="w-24 h-12 border-solid border-2 border-black dark:border-white rounded-full flex items-center mx-auto">
+    <h2 class="text-black dark:text-white text-lg mx-6">
+      Hello!
+    </h2>
+  </div>
+
+  <!-- Typing Effect -->
+  <div class="block justify-center items-center">
     <h1 class="text-2xl sm:text-4xl font-semibold text-center mt-8 text-black dark:text-white">
       I'm 
-      <span class="text-orange-500">
-        Shivansh,
-      </span>
-      <div class="mt-4">
-        <h1 id="text-changer" class="text-4xl sm:text-6xl font-bold inline-block truncate border-r-2 border-solid border-orange-500 whitespace-nowrap"></h1>
-      </div>
-      <div class="h-20 w-32">
-        <div class="bg-cover bg-center" style="background-image: url(./img/my-image.jpg);">
-          <!-- <img src="./img/my-image.jpg" alt="my-image" class="h-20 w-32"> -->
+        <span class="text-orange-500">
+          Shivansh,
+        </span>
+        <div class="mt-4">
+          <h1 id="text-changer" class="text-4xl sm:text-6xl font-bold inline-block truncate border-r-2 border-solid
+           border-orange-500 whitespace-nowrap"></h1>
         </div>
-      </div>
+    </h1>
   </div>
-  </h1>
+
+  <!-- My Image -->
+  <div class="flex justify-center items-center mt-32 relatives sm:mt-36">
+    <div class="absolute h-80 w-5/6 mt-40 bg-orange-300 rounded-t-full z-0 sm:h-2/4 sm:w-2/5 sm:mt-44"></div>
+    <img src="./img/myImage.png" alt="my-image" class="absolute mt-2.5 z-0 sm:mt-1.5">
+    <div class="absolute bg-gray-400 rounded-full bg-clip-padding backdrop-blur-sm bg-opacity-25 border border-gray-100
+      mt-80 h-16 w-64 z-10 sm:mt-96 sm:h-20 sm:w-72">
+      <a href="#" class="inline-flex items-center text-white text-lg font-bold py-2.5 px-7 rounded-full mt-2 ml-2 bg-orange-400
+      hover:bg-orange-500 sm:py-4 sm:px-9 sm:mt-2 sm:ml-2">
+        Portfolio
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
+        </svg>
+      </a>
+      <a href="#" class="text-white text-lg font-bold px-1.5 sm:px-3">
+        Hire me
+      </a>
+    </div>
+  </div>
 </body>
 </html>
