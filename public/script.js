@@ -1,18 +1,18 @@
 // Dark Mode
 
 document.addEventListener('DOMContentLoaded', function() {
-    const themeToggle = document.getElementById('themeToggle');
-    const themeImage = document.getElementById('themeImage');
-    const menuOpenImage = document.getElementById('menuOpenImage'); // Hamburger menu open image 
-    const menuCloseImage = document.getElementById('menuCloseImage'); // Hamburger menu close image
+    const ThemeToggle = document.getElementById('ThemeToggle');
+    const ThemeImage = document.getElementById('ThemeImage');
+    const MenuOpenImage = document.getElementById('MenuOpenImage'); // Hamburger menu open image 
+    const MenuCloseImage = document.getElementById('MenuCloseImage'); // Hamburger menu close image
 
     // Check the current theme
-    const currentTheme = localStorage.theme;
+    const CurrentTheme = localStorage.theme;
 
     // Apply the theme
-    applyTheme();
+    ApplyTheme();
 
-    themeToggle.addEventListener('click', function() {
+    ThemeToggle.addEventListener('click', function() {
         // Toggle the theme
         if (localStorage.theme === 'dark') {
             localStorage.theme = 'light'; // Change to light mode
@@ -21,21 +21,21 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Apply the theme
-        applyTheme();
+        ApplyTheme();
     });
 
     // Function to apply the theme
-    function applyTheme() {
+    function ApplyTheme() {
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
-            themeImage.src = "./img/darkMode.png"; // Set dark mode image
-            menuOpenImage.src = "./img/hamburgerMenuOpenBlack.png"; // Set black hamburger menu open image
-            menuCloseImage.src = "./img/hamburgerMenuCloseBlack.png"; // Set black hamburger menu close image
+            ThemeImage.src = "./img/darkMode.png"; // Set dark mode image
+            MenuOpenImage.src = "./img/hamburgerMenuOpenBlack.png"; // Set black hamburger menu open image
+            MenuCloseImage.src = "./img/hamburgerMenuCloseBlack.png"; // Set black hamburger menu close image
         } else {
             document.documentElement.classList.remove('dark');
-            themeImage.src = "./img/lightMode.png"; // Set light mode image
-            menuOpenImage.src = "./img/hamburgerMenuOpenWhite.png"; // Set white hamburger menu open image
-            menuCloseImage.src = "./img/hamburgerMenuCloseWhite.png"; // Set white hamburger menu close image
+            ThemeImage.src = "./img/lightMode.png"; // Set light mode image
+            MenuOpenImage.src = "./img/hamburgerMenuOpenWhite.png"; // Set white hamburger menu open image
+            MenuCloseImage.src = "./img/hamburgerMenuCloseWhite.png"; // Set white hamburger menu close image
         }
     }
 });
@@ -44,15 +44,15 @@ document.addEventListener('DOMContentLoaded', function() {
 // Hamburger Menu 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.getElementById('menuToggle');
-    const dropDownMenu = document.getElementById('dropDownMenu');
-    const menuOpenImage = document.getElementById('menuOpenImage');
-    const menuCloseImage = document.getElementById('menuCloseImage');
+    const MenuToggle = document.getElementById('MenuToggle');
+    const DropDownMenu = document.getElementById('DropDownMenu');
+    const MenuOpenImage = document.getElementById('MenuOpenImage');
+    const MenuCloseImage = document.getElementById('MenuCloseImage');
 
-    menuToggle.addEventListener('click', function() {
-      dropDownMenu.classList.toggle('hidden');
-      menuOpenImage.classList.toggle('hidden');
-      menuCloseImage.classList.toggle('hidden');
+    MenuToggle.addEventListener('click', function() {
+      DropDownMenu.classList.toggle('hidden');
+      MenuOpenImage.classList.toggle('hidden');
+      MenuCloseImage.classList.toggle('hidden');
     });
 });
 
@@ -60,33 +60,33 @@ document.addEventListener('DOMContentLoaded', function() {
 // Typing Effect 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const texts = [
+    const Texts = [
       "Web Developer",
       "Freelancer",
       "Web Enthusiast"
     ];
-    const typingText = document.getElementById('text-changer');
-    let textIndex = 0;
+    const TypingText = document.getElementById('text-changer');
+    let TextIndex = 0;
   
-    function typeWriter(text, i, cb) {
+    function TypeWriter(text, i, cb) {
       if (i < text.length) {
-        typingText.innerHTML += text.charAt(i);
+        TypingText.innerHTML += text.charAt(i);
         setTimeout(function() {
-          typeWriter(text, i + 1, cb)
+          TypeWriter(text, i + 1, cb)
         }, 80); // Adjust typing speed (milliseconds)
       } else {
         cb();
       }
     }
   
-    function typeNextText() {
-      typingText.innerHTML = ''; // Clear previous text
-      typeWriter(texts[textIndex], 0, function() {
-        textIndex = (textIndex + 1) % texts.length; // Move to the next text, looping back to the start if necessary
-        setTimeout(typeNextText, 1500); // Delay before typing the next text (milliseconds)
+    function TypeNextText() {
+      TypingText.innerHTML = ''; // Clear previous text
+      TypeWriter(Texts[TextIndex], 0, function() {
+        TextIndex = (TextIndex + 1) % Texts.length; // Move to the next text, looping back to the start if necessary
+        setTimeout(TypeNextText, 1500); // Delay before typing the next text (milliseconds)
       });
     }
   
     // Start typing effect with the first text
-    typeNextText();
+    TypeNextText();
 });
